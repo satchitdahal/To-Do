@@ -1,6 +1,6 @@
 import e from "cors";
 import React, { Fragment, useEffect, useState } from "react";
-
+import EditTodo from "./EditTodo";
 
 const ListTodos = () => {
 
@@ -39,9 +39,9 @@ const ListTodos = () => {
             <table class="table mt-5 text-center">
                 <thead>
                     <tr>
-                        <th>Description</th>
-                        <th>Edit</th>
-                        <th>Delete</th>
+                        <th>description</th>
+                        <th>edit</th>
+                        <th>delete</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -49,7 +49,7 @@ const ListTodos = () => {
 
                         <tr key={todo.todo_id}>
                             <td>{todo.description}</td>
-                            <td><button className="btn btn-edit">Edit</button></td>
+                            <td><EditTodo todo={todos} /></td>
                             <td><button className="btn btn-danger " onClick={() => deleteTodo(todo.todo_id)}>Delete</button></td>
                         </tr>
 
