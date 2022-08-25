@@ -29,7 +29,7 @@ const EditTodo = ({ todo }) => {
                 class="btn btn-warning"
                 data-toggle="modal"
                 data-target={`#id${todo.todo_id}`}>
-                EDIT
+                edit
             </button>
 
             <div
@@ -39,7 +39,7 @@ const EditTodo = ({ todo }) => {
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h4 class="modal-title">EDIT TODO</h4>
+                            <h4 class="modal-title">edit</h4>
                             <button type="button" class="close" data-dismiss="modal" onClick={() => setDescription(todo.description)}>
                                 &times;
                             </button>
@@ -56,16 +56,16 @@ const EditTodo = ({ todo }) => {
 
 
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-warning" data-dismiss="modal"
-                                onClick={e => UpdateTodo(e)}>EDIT</button>
+                            <button type="button" class="btn btn-success" data-dismiss="modal"
+                                onClick={e => UpdateTodo(e)}>done</button>
                             <button type="button" class="btn btn-danger" data-dismiss="modal"
-                                onClick={e => setDescription(todo.description)}>CLOSE</button>
+                                onClick={e => setDescription(todo.description)}>close</button>
                         </div>
 
                     </div>
                 </div>
             </div>
-        </Fragment>
+        </Fragment >
     )
 }
 

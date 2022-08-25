@@ -30,7 +30,7 @@ const InputTodo = () => {
     }
 
     return <Fragment>
-        <h1 className="text-center mt-5 ">TODO</h1>
+        <h1 className="text-center mt-5 ">todo-list</h1>
         <form className="d-flex" mt-5 onSubmit={onSubmitForm}>
 
             <input
@@ -46,7 +46,7 @@ const InputTodo = () => {
                 onChange={e => setDescription(e.target.value)} />
             {/*add button is attached to form so it will submit the form
                 when pressed  */}
-            <button className="btn btn-success">Add</button>
+            <button className="btn btn-success">add</button>
         </form>
     </Fragment >
 

@@ -39,7 +39,7 @@ const ListTodos = () => {
             <table class="table mt-5 text-center">
                 <thead>
                     <tr>
-                        <th>description</th>
+                        <th>items</th>
                         <th>edit</th>
                         <th>delete</th>
                     </tr>
@@ -50,7 +50,7 @@ const ListTodos = () => {
                         <tr key={todo.todo_id}>
                             <td>{todo.description}</td>
                             <td><EditTodo todo={todo} /></td>
-                            <td><button className="btn btn-danger " onClick={() => deleteTodo(todo.todo_id)}>Delete</button></td>
+                            <td><button className="btn btn-danger " onClick={() => deleteTodo(todo.todo_id)}>remove</button></td>
                         </tr>
 
                     ))}
